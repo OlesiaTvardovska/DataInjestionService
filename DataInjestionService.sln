@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper.Core", "WebScrapper.Core\WebScrapper.Core.csproj", "{CAAA6F5E-7283-42BB-9B0F-99D1E29C0EBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.Core", "WebScrapper.Core\WebScrapper.Core.csproj", "{CAAA6F5E-7283-42BB-9B0F-99D1E29C0EBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C577A927-F11C-4AB0-B45F-8E0370E20DF3}"
 EndProject
@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{384FA4A5-7AA3-49C4-A7C7-8EDC0AA50D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper.WorkerService", "WebScrapper.WorkerService\WebScrapper.WorkerService.csproj", "{CED99749-2AA1-4641-8EAE-144DE157AA7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.WorkerService", "WebScrapper.WorkerService\WebScrapper.WorkerService.csproj", "{CED99749-2AA1-4641-8EAE-144DE157AA7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper.Sender", "WebScrapper.Sender\WebScrapper.Sender.csproj", "{833A6AD4-6047-4F38-B4F2-67925B3B2E62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CED99749-2AA1-4641-8EAE-144DE157AA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED99749-2AA1-4641-8EAE-144DE157AA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED99749-2AA1-4641-8EAE-144DE157AA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CAAA6F5E-7283-42BB-9B0F-99D1E29C0EBD} = {C577A927-F11C-4AB0-B45F-8E0370E20DF3}
 		{CED99749-2AA1-4641-8EAE-144DE157AA7D} = {384FA4A5-7AA3-49C4-A7C7-8EDC0AA50D72}
+		{833A6AD4-6047-4F38-B4F2-67925B3B2E62} = {AE317F66-5BB6-4BB9-84EE-F997736CC1C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C47D40BD-FA28-430D-87FB-68B9E082DF4C}

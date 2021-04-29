@@ -17,5 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebScrapper.Core\WebScrapper.Core.csproj" />
+    <ProjectReference Include="..\WebScrapper.Sender\WebScrapper.Sender.csproj" />
   </ItemGroup>
 </Project>

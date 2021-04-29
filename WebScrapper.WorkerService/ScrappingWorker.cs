@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebScrapper.Core.Constants;
 using WebScrapper.Core.Interfaces;
+using WebScrapper.Sender;
 
 namespace WebScrapper.WorkerService
 {
@@ -14,11 +15,13 @@ namespace WebScrapper.WorkerService
         private readonly ILogger<ScrappingWorker> _logger;
         private Timer _timer;
         private IScrapperService _scrapper;
+        private RabbitMQSender _rabbitMQSender;
 
         public ScrappingWorker(ILogger<ScrappingWorker> logger, IScrapperService scrapper)
         {
             _logger = logger;
             _scrapper = scrapper;
+            _rabbitMQSender = new RabbitMQSender();
         }
 
         public Task StartAsync(CancellationToken stoppingToken)
@@ -35,6 +38,7 @@ namespace WebScrapper.WorkerService
             var count = Interlocked.Increment(ref _executionCount);
             _scrapper.Init(Constants.googleNewsUrl);
             var items = _scrapper.DoScrapping();
+            _rabbitMQSender.SendData(items);
             _scrapper.CloseBrowser();
             _logger.LogInformation(
                 "Scrapping Service running... Count: {Count}", count);
