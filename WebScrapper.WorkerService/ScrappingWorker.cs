@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using WebScrapper.Core.Constants;
 using WebScrapper.Core.Interfaces;
 
 namespace WebScrapper.WorkerService
@@ -25,14 +26,16 @@ namespace WebScrapper.WorkerService
             _logger.LogInformation("Scrapping Service running...");
 
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(5));
+                TimeSpan.FromSeconds(120));
 
             return Task.CompletedTask;
         }
         private void DoWork(object state)
         {
             var count = Interlocked.Increment(ref _executionCount);
-
+            _scrapper.Init(Constants.googleNewsUrl);
+            var items = _scrapper.DoScrapping();
+            _scrapper.CloseBrowser();
             _logger.LogInformation(
                 "Scrapping Service running... Count: {Count}", count);
         }
