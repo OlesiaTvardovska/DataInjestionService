@@ -6,10 +6,11 @@ using WebScrapper.Core.Models;
 
 namespace WebScrapper.Core.Interfaces
 {
-    public interface IScrapperService
+    public interface IScrapperService: IDisposable
     {
         void Init(string mainUrl);
         List<NewsModel> DoScrapping();
         void CloseBrowser();
+
     }
 }

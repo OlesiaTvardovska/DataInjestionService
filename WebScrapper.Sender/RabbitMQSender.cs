@@ -34,8 +34,7 @@ namespace WebScrapper.Sender
 
                     foreach (var news in newsList)
                     {
-                        var body = Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(news));
-
+                        var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(news));
                         channel.BasicPublish(exchange: "",
                                              routingKey: "News",
                                              basicProperties: properties,

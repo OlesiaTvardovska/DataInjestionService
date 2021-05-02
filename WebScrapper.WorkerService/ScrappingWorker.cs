@@ -29,7 +29,7 @@ namespace WebScrapper.WorkerService
             _logger.LogInformation("Scrapping Service running...");
 
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(120));
+                TimeSpan.FromSeconds(100));
 
             return Task.CompletedTask;
         }
@@ -40,6 +40,7 @@ namespace WebScrapper.WorkerService
             var items = _scrapper.DoScrapping();
             _rabbitMQSender.SendData(items);
             _scrapper.CloseBrowser();
+            _scrapper.Dispose();
             _logger.LogInformation(
                 "Scrapping Service running... Count: {Count}", count);
         }

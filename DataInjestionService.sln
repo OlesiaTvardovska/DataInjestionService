@@ -13,7 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{38
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.WorkerService", "WebScrapper.WorkerService\WebScrapper.WorkerService.csproj", "{CED99749-2AA1-4641-8EAE-144DE157AA7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper.Sender", "WebScrapper.Sender\WebScrapper.Sender.csproj", "{833A6AD4-6047-4F38-B4F2-67925B3B2E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.Sender", "WebScrapper.Sender\WebScrapper.Sender.csproj", "{833A6AD4-6047-4F38-B4F2-67925B3B2E62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.ConsumerService", "WebScrapper.ConsumerService\WebScrapper.ConsumerService.csproj", "{1FF2AD46-7BFA-43D6-8F37-902549DD8141}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{914B9162-D8AF-4FCF-8907-656E20313D93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.DAL", "WebScrapper.DAL\WebScrapper.DAL.csproj", "{88CE787B-43F5-4B9E-9A2B-41A66C162EAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.Application", "WebScrapper.Application\WebScrapper.Application.csproj", "{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,18 @@ Global
 		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833A6AD4-6047-4F38-B4F2-67925B3B2E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF2AD46-7BFA-43D6-8F37-902549DD8141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF2AD46-7BFA-43D6-8F37-902549DD8141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF2AD46-7BFA-43D6-8F37-902549DD8141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF2AD46-7BFA-43D6-8F37-902549DD8141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +61,9 @@ Global
 		{CAAA6F5E-7283-42BB-9B0F-99D1E29C0EBD} = {C577A927-F11C-4AB0-B45F-8E0370E20DF3}
 		{CED99749-2AA1-4641-8EAE-144DE157AA7D} = {384FA4A5-7AA3-49C4-A7C7-8EDC0AA50D72}
 		{833A6AD4-6047-4F38-B4F2-67925B3B2E62} = {AE317F66-5BB6-4BB9-84EE-F997736CC1C6}
+		{1FF2AD46-7BFA-43D6-8F37-902549DD8141} = {384FA4A5-7AA3-49C4-A7C7-8EDC0AA50D72}
+		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF} = {914B9162-D8AF-4FCF-8907-656E20313D93}
+		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F} = {C577A927-F11C-4AB0-B45F-8E0370E20DF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C47D40BD-FA28-430D-87FB-68B9E082DF4C}
