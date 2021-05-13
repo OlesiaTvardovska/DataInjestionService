@@ -9,7 +9,7 @@ using WebScrapper.Sender;
 
 namespace WebScrapper.WorkerService
 {
-    public class ScrappingWorker: IHostedService, IDisposable
+    public class ScrappingWorker: BackgroundService
     {
         private int _executionCount;
         private readonly ILogger<ScrappingWorker> _logger;
@@ -28,9 +28,6 @@ namespace WebScrapper.WorkerService
         {
             _logger.LogInformation("Scrapping Service running...");
 
-            _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(100));
-
             return Task.CompletedTask;
         }
         private void DoWork(object state)
@@ -39,24 +36,33 @@ namespace WebScrapper.WorkerService
             _scrapper.Init(Constants.googleNewsUrl);
             var items = _scrapper.DoScrapping();
             _rabbitMQSender.SendData(items);
-            _scrapper.CloseBrowser();
-            _scrapper.Dispose();
             _logger.LogInformation(
                 "Scrapping Service running... Count: {Count}", count);
         }
 
-        public Task StopAsync(CancellationToken stoppingToken)
+        public override Task StopAsync(CancellationToken stoppingToken)
         {
             _logger.LogInformation("Scrapping Service stopping....");
 
             _timer?.Change(Timeout.Infinite, 0);
-
+            _scrapper.CloseBrowser();
+            _scrapper.Dispose();
             return Task.CompletedTask;
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             _timer?.Dispose();
+        }
+
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            _logger.LogInformation("Scrapping Service running...");
+
+            _timer = new Timer(DoWork, null, TimeSpan.Zero,
+                TimeSpan.FromSeconds(100));
+
+            return Task.CompletedTask;
         }
     }
 }

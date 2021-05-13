@@ -21,10 +21,6 @@ namespace WebScrapper.Core
 
         public void Init(string mainUrl)
         {
-            if(_driver == null)
-            {
-                _driver = new ChromeDriver();
-            }
             _driver.Navigate().GoToUrl(mainUrl);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             _driver.Manage().Window.Maximize();
