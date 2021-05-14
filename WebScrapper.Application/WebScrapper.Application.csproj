@@ -14,8 +14,4 @@
     <ProjectReference Include="..\WebScrapper.Core\WebScrapper.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\NewsFeatures\Queries\" />
-  </ItemGroup>
-
 </Project>

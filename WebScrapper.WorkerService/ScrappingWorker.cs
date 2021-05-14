@@ -60,7 +60,7 @@ namespace WebScrapper.WorkerService
             _logger.LogInformation("Scrapping Service running...");
 
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(100));
+                TimeSpan.FromMinutes(30));
 
             return Task.CompletedTask;
         }
