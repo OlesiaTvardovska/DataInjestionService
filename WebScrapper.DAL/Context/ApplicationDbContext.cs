@@ -18,6 +18,8 @@ namespace WebScrapper.DAL.Context
 
         public DbSet<NewsEntity> News { get; set; }
 
+        public DbSet<MarkedItemEntity> MarkedNews { get; set; }
+
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             return await base.SaveChangesAsync(cancellationToken);
