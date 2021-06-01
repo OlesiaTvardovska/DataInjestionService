@@ -22,13 +22,13 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@apollo/client": "^3.0.0",
-    "angularx-social-login": "^3.0.0",
+    "angularx-social-login": "3.5.7",
     "apollo-angular": "^2.6.0",
     "graphql": "^15.0.0",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.29",
