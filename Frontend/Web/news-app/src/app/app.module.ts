@@ -10,6 +10,8 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule } from '@angular/material';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const config = new AuthServiceConfig([
   {
@@ -32,7 +34,9 @@ export function provideConfig() {
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [
     {
