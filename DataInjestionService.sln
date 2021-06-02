@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.DAL", "WebScrap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.Application", "WebScrapper.Application\WebScrapper.Application.csproj", "{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper.Api", "WebScrapper.Api\WebScrapper.Api.csproj", "{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapper.Api", "WebScrapper.Api\WebScrapper.Api.csproj", "{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{966C9169-BCCF-49B8-8D1A-C77D361C05DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsApp.Desktop", "NewsApp.Desktop\NewsApp.Desktop.csproj", "{803EC033-FC48-4801-B213-2FB638BD03DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803EC033-FC48-4801-B213-2FB638BD03DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803EC033-FC48-4801-B213-2FB638BD03DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803EC033-FC48-4801-B213-2FB638BD03DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803EC033-FC48-4801-B213-2FB638BD03DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +79,7 @@ Global
 		{88CE787B-43F5-4B9E-9A2B-41A66C162EAF} = {914B9162-D8AF-4FCF-8907-656E20313D93}
 		{EAD0DCD0-EEC8-4B61-AD41-2CBD355DDA3F} = {C577A927-F11C-4AB0-B45F-8E0370E20DF3}
 		{DFE64EEE-4174-4044-8D0B-D8C846CFD5F7} = {384FA4A5-7AA3-49C4-A7C7-8EDC0AA50D72}
+		{803EC033-FC48-4801-B213-2FB638BD03DB} = {966C9169-BCCF-49B8-8D1A-C77D361C05DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C47D40BD-FA28-430D-87FB-68B9E082DF4C}
